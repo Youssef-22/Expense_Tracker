@@ -25,25 +25,25 @@ Before setting up the project, make sure you have the following installed:
 
 ## running the app step by step
 
--clone the git repo using : git clone https://github.com/Youssef-22/Expense_Tracker.git
--for the frontend you should start by cd /Expense_tracker/client
--Install Dependencies with : npm install 
--after that you can run the frontend with ng serve
--moving now to the backend using cd /Expense_tracker/backend
--restore the Nuget packages using dotnet restore
--apply migrations using dotnet ef database update
--finally start the server using dotnet run
+- clone the git repo using : git clone https://github.com/Youssef-22/Expense_Tracker.git
+- for the frontend you should start by cd /Expense_tracker/client
+- Install Dependencies with : npm install 
+- after that you can run the frontend with ng serve
+- moving now to the backend using cd /Expense_tracker/backend
+- restore the Nuget packages using dotnet restore
+- apply migrations using dotnet ef database update
+- finally start the server using dotnet run
 
 
 
 
 ## Limitations 
 
--No Authentication: Currently, no user authentication is implemented.
+- No Authentication: Currently, no user authentication is implemented.
 
 
 
 ## Future Improvements
--Adding authentication and user management.
--Implementing advanced filtering and analytics for expenses.
+- Adding authentication and user management.
+- Implementing advanced filtering and analytics for expenses.
 
