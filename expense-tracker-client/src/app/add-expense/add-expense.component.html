@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="expense.category" placeholder="Category" name="category" required />
+    <input [(ngModel)]="expense.amount" placeholder="Amount" type="number" name="amount" required />
+    <input [(ngModel)]="expense.description" placeholder="Description" name="description" />
+    <input [(ngModel)]="expense.date" type="date" name="date" />
+    <button type="submit">Add Expense</button>
+  </form>
+  

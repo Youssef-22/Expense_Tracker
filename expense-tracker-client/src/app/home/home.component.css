@@ -1,0 +1,237 @@
+.create-budget-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .create-budget-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .create-budget-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .create-budget-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .create-budget-container input:focus {
+    border-color: #28a745;
+  }
+  
+  .create-budget-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-budget-container button:hover {
+    background-color: #218838;
+  }
+  
+  .create-budget-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+.expense-form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .expense-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .expense-form input,
+  .expense-form textarea,
+  .expense-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .expense-form input:focus,
+  .expense-form textarea:focus,
+  .expense-form button:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  }
+  
+  .expense-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .expense-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .expense-form button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  .budget-details-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .budget-details-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .budget-details-container p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .budget-details-container span {
+    font-weight: bold;
+    color: #333;
+  }
+ 
+  
+  
+  .progress-bar-container {
+    border: 1px solid #ccc;
+    background-color: #e9ecef;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .progress-bar-fill {
+    height: 20px;
+    background-color: green; /* Default color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .progress-bar-fill.over-budget {
+    background-color: red; /* Color when over budget */
+  }
+  
+   
+   .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .create-budget-container,
+  .budget-details-container,
+  .expense-form-container {
+    margin-bottom: 40px; /* Add sufficient spacing between sections */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .over-budget-warning {
+    color: red;
+    font-weight: bold;
+  }
+  
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Adds spacing above the table */
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  ng-template {
+    margin-top: 20px;
+  }
+  
+  

@@ -1,0 +1,110 @@
+<div class="container">
+  
+
+  <!-- Add New Budget -->
+  <div *ngIf="!budget" class="create-budget-container">
+    <h2>Create a New Budget</h2>
+    <form (ngSubmit)="addBudget()">
+      <input
+        type="number"
+        [(ngModel)]="newBudgetAmount"
+        name="budgetAmount"
+        placeholder="Enter total budget"
+        required
+      />
+      <button type="submit">Create Budget</button>
+    </form>
+  </div>
+  
+
+  <!-- Display Budget -->
+  <div *ngIf="budget">
+    <div class="budget-details-container">
+      <h2>Budget Details</h2>
+      <p>Total Budget: <span>{{ budget.amount }}</span></p>
+      <p>Total Expenses: <span>{{ budget.totalExpenses }}</span></p>
+      <p>Remaining Budget: <span>{{ budget.remainingBudget }}</span></p>
+      <p *ngIf="isOverBudget" class="over-budget-warning">
+        Warning: You are over budget!
+      </p>
+    
+      <!-- Progress Bar -->
+      <!-- <div class="progress-bar-container">
+        <div
+          class="progress-bar-fill"
+          [style.width]="budget.progress + '%'"
+        ></div>
+      </div> -->
+      <div class="progress-bar-container">
+        <div
+          class="progress-bar-fill"
+          [style.width]="budget.progress + '%'"
+          [ngClass]="{ 'over-budget': isOverBudget }"
+        ></div>
+      </div>
+      <p>Progress: <span>{{ budget.progress | number: '1.2-2' }}%</span></p>
+    </div>
+    
+
+    <!-- Add New Expense -->
+    <div class="expense-form-container">
+      <h2>Add Expense</h2>
+      <form (ngSubmit)="addExpense()" class="expense-form">
+        <input
+          type="number"
+          [(ngModel)]="expenseAmount"
+          name="expenseAmount"
+          placeholder="Expense amount"
+          required
+        />
+        <input
+          type="text"
+          [(ngModel)]="expenseCategory"
+          name="expenseCategory"
+          placeholder="Expense category"
+          required
+        />
+        <textarea
+          [(ngModel)]="expenseDescription"
+          name="expenseDescription"
+          placeholder="Expense description"
+        ></textarea>
+        <input
+          type="date"
+          [(ngModel)]="expenseDate"
+          name="expenseDate"
+          required
+        />
+        <button type="submit">Add Expense</button>
+      </form>
+    </div>
+    
+  </div>
+
+  <!-- List of Expenses -->
+  <div *ngIf="expenses.length > 0; else noExpenses">
+    <h2>Expenses</h2>
+    <table border="1" style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of expenses">
+          <td>{{ expense.date | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.amount }}</td>
+          <td>{{ expense.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noExpenses>
+    <p>No expenses added yet.</p>
+  </ng-template>
+  
+</div>
